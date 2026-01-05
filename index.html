@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Registration Form</h2>
+        <div id="formErrors" class="error-summary"></div>
+        <form id="regForm">
+            <div class="form-group">
+                <label for="fname">First Name *</label>
+                <input type="text" id="fname" required>
+                <span class="error"></span>
+            </div>
+            <div class="form-group">
+                <label for="lname">Last Name *</label>
+                <input type="text" id="lname" required>
+                <span class="error"></span>
+            </div>
+            <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" required>
+                <span class="error"></span>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" required>
+                <span class="error"></span>
+            </div>
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" id="age" min="0">
+                <span class="error"></span>
+            </div>
+            <div class="form-group">
+                <label>Gender *</label>
+                <div class="gender-options">
+                    <label>
+                        <input type="radio" id="male" name="gender" value="Male" required>
+                        Male
+                    </label>
+                    <label>
+                        <input type="radio" id="female" name="gender" value="Female">
+                        Female
+                    </label>
+                    <label>
+                        <input type="radio" id="other" name="gender" value="Other">
+                        Other
+                    </label>
+                </div>
+                <span class="error"></span>
+            </div>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <textarea id="address"></textarea>
+                <span class="error"></span>
+            </div>
+            <div class="form-group">
+                <label for="country">Country *</label>
+                <select id="country" required>
+                    <option value="">Select Country</option>
+                    <option value="USA">USA</option>
+                    <option value="India">India</option>
+                    <option value="Canada">Canada</option>
+                </select>
+                <span class="error"></span>
+            </div>
+            <div class="form-group">
+                <label for="state">State *</label>
+                <select id="state" required>
+                    <option value="">Select State</option>
+                </select>
+                <span class="error"></span>
+            </div>
+            <div class="form-group">
+                <label for="city">City *</label>
+                <select id="city" required>
+                    <option value="">Select City</option>
+                </select>
+                <span class="error"></span>
+            </div>
+            <div class="form-group">
+                <label for="password">Password *</label>
+                <input type="password" id="password" required>
+                <span class="error"></span>
+                <div id="strength">Strength:</div>
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password *</label>
+                <input type="password" id="confirmPassword" required>
+                <span class="error"></span>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="terms" required>
+                I agree to Terms & Conditions *
+                <span class="error"></span>
+            </div>
+            <button type="submit" id="submitBtn" disabled>Submit</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
